@@ -182,7 +182,7 @@ class ProductController extends Controller
             $product->is_low_stock = $product->stock_quantity <= $product->min_stock_level;
             $product->is_out_of_stock = $product->stock_quantity == 0;
             $product->location_full = $product->section->name . ' - ' . $product->shelf->name . ' (Level ' . $product->shelf->level . ')';
-            $product->image_url = $product->image ? asset('storage/' . $product->image) : null;
+            // $product->image_url = $product->image ? asset('storage/' . $product->image) : null;
 
             return response()->json([
                 'success' => true,
